@@ -1,30 +1,35 @@
 # Gigavel
 
-Small PHP MVC framework in a Laravel-like shape: routing, controllers, views, and models without pulling in the full Laravel stack. Interactive UI uses HTMX and Alpine.js.
-
-Packagist: https://packagist.org/packages/gvel/gigavel
+A small Laravel-style PHP MVC framework. Models, views, controllers, routing, and enough structure to ship without pulling in a full Laravel stack. HTMX and Alpine.js handle interactive UI with little custom JavaScript.
 
 ## Stack
 
-PHP, Composer, HTMX, Alpine.js
+PHP (MVC), HTMX, Alpine.js, Composer
+
+## Layout
+
+```
+gigavel/
+├── app/Controllers/
+├── config/routes.php
+├── resources/views/
+├── public/index.php
+├── .env.example
+└── composer.json
+```
 
 ## Setup
 
 ```bash
 composer install
 cp .env.example .env
-# point the web root at public/
+# point your web root (or `php -S`) at public/
 ```
 
-## Layout
+## Why it exists
 
-```
-app/Controllers/
-config/routes.php
-resources/views/
-public/index.php
-```
+I wanted Laravel-shaped habits (routing, controllers, views) in a codebase I could read end to end. Gigavel is that middle ground.
 
 ## Author
 
-Biruk Endrias — https://iambiruk.com · https://github.com/biruktk
+Biruk Endrias — [iambiruk.vercel.app](https://iambiruk.vercel.app)
